@@ -21,6 +21,21 @@ fetch(url + "bloody mary")
         console.log(myDrink.strDrink);
         console.log(myDrink.strInstructions);
 
+        let count = 1;
+        let ingredients = [];
+
+        for ( let i in myDrink) {
+            let ingredient = "";
+            let measure = "";
+            if (i.startsWith("strIngredient") && myDrink[i]) {
+                ingredient = myDrink[i];
+                measure = myDrink[`strMeasure` + count];
+                count += 1;
+                console.log(ingredient, measure);
+            }
+        }
+    
+
     });
 
 form.addEventListener("submit", async evt => {
