@@ -95,11 +95,14 @@ img {
     font-weight: 600;
 }
 
+#ingredient-con {
 
+}
 #show-recipe {
     font-size: 1 em;
+    position: relative;
     background-color: aliceblue;
-    /* border: none; */
+    border: none;
     font-weight: 200;
     border-radius: 0.3em;
     cursor: pointer;
@@ -135,6 +138,11 @@ img {
     left: 90%;
     border-radius: 0.3em;
     cursor: pointer;
+}
+h3 {
+    text-align: center;
+    margin-top: 1.8em;
+    color: navy;
 }
 
 ul {

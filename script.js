@@ -8,9 +8,15 @@ let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
 const form = document.querySelector(".container");
 
-let cocktail = document.getElementById("user-input").value;
 
-fetch(url + "bloody mary")
+searchBtn.addEventListener("click", (evt) => {
+  evt.preventDefault()
+  let cocktail = document.getElementById("user-input").value;
+if (cocktail.length == 0) {
+  result.innerHTML = `<h3> Please Enter a Cocktail </h3>`;
+} else {
+  
+fetch(url + cocktail)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
@@ -19,7 +25,7 @@ fetch(url + "bloody mary")
     console.log(myDrink.strDrinkThumb);
     console.log(myDrink.strDrink);
     console.log(myDrink.strInstructions);
-
+  
     let count = 1;
     let ingredients = [];
 
@@ -34,7 +40,6 @@ fetch(url + "bloody mary")
         ingredients.push(`${measure} ${ingredient}`);
       }
     }
-
     console.log(ingredients);
 
     result.innerHTML = `<img src=${myDrink.strDrinkThumb}>
@@ -48,7 +53,6 @@ fetch(url + "bloody mary")
         </div>
             <button id="show-recipe">Get Recipe</button>
         `;
-
             let ingredientCon = document.getElementById("ingredient-con");
             let parent = document.createElement("ul");
             let recipe = document.getElementById("recipe");
@@ -65,8 +69,16 @@ fetch(url + "bloody mary")
             hideRecipe.addEventListener("click", () => {
               recipe.style.display = "none";
             });
-    //     });
 
+            showRecipe.addEventListener("click", () => {
+              recipe.style.display = "block";
+            });
+          })
+          .catch (() => {
+            result.innerHTML =`<h3></h3>`;
+          });
+}
+});
     // form.addEventListener("submit", async evt => {
     //     evt.preventDefault();
 
@@ -88,8 +100,3 @@ fetch(url + "bloody mary")
     //     const errorDisplay = document.createElement("div");
     //     errorDisplay.textContent = message;
     //     errorDisplay.classList.add("errorDisplay");
-
-    //     result.textContent = "";
-    //     result.style.display = "flex";
-    //     result.appendChild(errorDisplay);
-  });
