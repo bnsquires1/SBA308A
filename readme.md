@@ -1,0 +1,1 @@
+Mystical Mixology is a cocktail recipe guide using html, css, and js modules. Cocktail information and data is being retrieved from an open API database.

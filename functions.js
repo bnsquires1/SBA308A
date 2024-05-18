@@ -10,6 +10,11 @@ function getDrinkImg (drinkId) {
 
 }
 
+
+hideRecipe.addEventListener("click", () => {
+    recipe.style.display = "none";
+})
+
 // export function displayError(message) {
 // const errorDisplay = document.createElement("p");
 // errorDisplay.textContent = message;

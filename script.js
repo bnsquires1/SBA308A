@@ -17,7 +17,7 @@ if (cocktail.length == 0) {
 } else {
   
 fetch(url + cocktail)
-  .then((response) => response.json())
+  .then ((response) => response.json())
   .then((data) => {
     console.log(data);
     let myDrink = data.drinks[0];
