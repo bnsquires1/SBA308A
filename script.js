@@ -75,28 +75,9 @@ fetch(url + cocktail)
             });
           })
           .catch (() => {
+            // displayError()
             result.innerHTML =`<h3></h3>`;
           });
 }
 });
-    // form.addEventListener("submit", async evt => {
-    //     evt.preventDefault();
-
-    //     if (cocktail) {
-    //         try {
-    //             const drinkData = await getDrinkData(cocktail);
-    //             displayDrinkInfo(drinkData);
-    //         }
-    //         catch (error) {
-    //             console.error(error);
-    //             displayError(error);
-    //         };
-    //     } else {
-    //         displayError("please enter a cocktail");
-    //     }
-    // });
-
-    // function displayError(message) {
-    //     const errorDisplay = document.createElement("div");
-    //     errorDisplay.textContent = message;
-    //     errorDisplay.classList.add("errorDisplay");
+    

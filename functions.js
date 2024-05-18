@@ -1,26 +1,17 @@
-async function getDrinkData(cocktail){
 
-}
+let cocktail = document.getElementById("user-input").value;
 
-function displayDrinkInfo(data) {
-
-}
-
-function getDrinkImg (drinkId) {
-
-}
-
+showRecipe.addEventListener("click", () => {
+    recipe.style.display = "block";
+});
 
 hideRecipe.addEventListener("click", () => {
     recipe.style.display = "none";
-})
+  });
 
-// export function displayError(message) {
-// const errorDisplay = document.createElement("p");
-// errorDisplay.textContent = message;
-// errorDisplay.classList.add("errorDisplay");
 
-// result.textContent = "";
-// result.style.display = "flex";
-// result.appendChild(errorDisplay);
-// };
+ export function displayError(message) {
+        const errorDisplay = document.createElement("div");
+        errorDisplay.textContent = "please enter a cocktail";
+        errorDisplay.classList.add("errorDisplay")
+  }
