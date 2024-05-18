@@ -1,4 +1,5 @@
 // import { displayError } from "./functions.js";
+// import { hide } from "./anothafunction";
 
 console.log("testing 123!");
 
@@ -69,6 +70,9 @@ fetch(url + cocktail)
             hideRecipe.addEventListener("click", () => {
               recipe.style.display = "none";
             });
+
+            // hide ()
+            // ;
 
             showRecipe.addEventListener("click", () => {
               recipe.style.display = "block";
